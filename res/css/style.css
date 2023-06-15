@@ -1,0 +1,226 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("/static/images/background_space.jpg");
+	background-size: cover;
+}
+
+h4 {
+	color : orange;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #a7a6a6;
+	transition: 0.2s;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+	color: #a7a6a6;
+}
+
+.navbar-light .navbar-nav .active>.nav-link:hover {
+	color: white;
+}
+
+
+.affichageobjet, .affichageobserv, .listeobserv, .listeobjet, .suppressionobservation, .suppressionobjet, .suppressionmateriel{
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+pre {
+	word-break: normal;
+	background-color : #f5f5f5;
+	margin-top: 10px;
+	border : 1px solid;
+	border-radius : 4px;
+	padding: 15px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.containerSuppr {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.objetceleste {
+    margin: 10px;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(22, 91, 170, 0.6);
+    box-shadow: 10px 5px 5px #0B1354;
+    padding: 15px;
+    border-radius: 15px;
+    flex-basis: calc(33.33% - 20px);
+	text-align:center;
+	backdrop-filter: blur(5px);
+}
+
+.observ {
+    margin: 10px;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(22, 91, 170, 0.6);
+    box-shadow: 10px 5px 5px #0B1354;
+    padding: 15px;
+    border-radius: 15px;
+    flex-basis: calc(33.33% - 20px);
+	text-align:center;
+	backdrop-filter: blur(5px);
+}
+
+.materiel {
+    margin: 10px;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(22, 91, 170, 0.6);
+    box-shadow: 10px 5px 5px #0B1354;
+    padding: 15px;
+    border-radius: 15px;
+    flex-basis: calc(33.33% - 20px);
+	text-align:center;
+	backdrop-filter: blur(5px);
+}
+
+.observation {
+    margin: 10px;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(22, 91, 170, 0.6);
+    box-shadow: 10px 5px 5px #0B1354;
+    padding: 15px;
+    border-radius: 15px;
+    flex-basis: calc(33.33% - 20px);
+	text-align:center;
+	backdrop-filter: blur(5px);
+}
+
+.nom {
+	font-size: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding-bottom: 5px;
+}
+
+.lieu {
+	font-size: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding-bottom: 5px;
+}
+
+.line {
+	border-bottom: 2px solid;
+	box-shadow: 5px 1px 4px black;
+}
+
+#messagebanner {
+	justify-content: center;
+	width: 100%;
+}
+
+/* Style du formulaire */
+.modern-form {
+  	max-width: 400px;
+  	margin: 20px auto;
+  	background-color: rgba(22, 91, 170, 0.6);
+  	box-shadow: 10px 5px 5px #0B1354;
+  	backdrop-filter: blur(5px);
+  	padding: 15px;
+  	border-radius: 15px;
+
+}
+
+/* Style du groupe de formulaire */
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Style du label */
+.modern-label {
+	display: block;
+	margin-bottom: 5px;
+	color: white;
+	width: 100%;
+}
+
+.modern-input {
+	display: block;
+	margin-bottom: 5px;
+	color: black;
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+/* Style de l'entrée de texte */
+.modern-select {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background-color: #f5f5f5;
+	font-size: 16px;
+	color: #333;
+  	box-shadow: 5px 5px 5px #0B1354;
+}
+
+.modern-input::placeholder {
+	color: #999;
+}
+
+/* Style du bouton */
+.modern-button {
+  	width: 100%;
+  	padding: 10px;
+  	border: none;
+  	border-radius: 4px;
+  	background-color: #007bff;
+  	font-size: 16px;
+  	color: #fff;
+  	cursor: pointer;
+  	box-shadow: 5px 5px 5px #0B1354;
+
+}
+
+.modern-button:hover {
+  	background-color: #0056b3;
+}
+
+.insertForm {
+	max-width: 600px;
+	margin: 20px auto;
+	background-color: rgba(22, 91, 170, 0.6);
+	box-shadow: 10px 5px 5px #0B1354;
+	backdrop-filter: blur(5px);
+	padding: 15px;
+	border-radius: 15px;
+	color: white;
+}
+
+.star {
+	color: red;
+}

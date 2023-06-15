@@ -1,0 +1,9 @@
+type : MySQL
+nombase : astronomie
+host : localhost
+user : root
+pass : 
+port : 3306
+
+
+

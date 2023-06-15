@@ -1,0 +1,32 @@
+﻿<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<h3 class="suppressionmateriel">Suppression de materiel par son numéro</h3>
+
+<div class="containerSuppr">
+  <p class="message alert alert-${type}" id="messagebanner">${message}</p>
+  % for e in mesMateriels:
+  <div class="materiel">
+      ${e} <br />
+  </div>
+  % endfor
+</div>
+
+<form action="supprimermateriel" method="POST" class="modern-form">
+  <div class="form-group">
+    <label for="numMateriel" class="modern-label">Numéro:</label>
+        <select class="modern-select" name="numMateriel" id="numMateriel">
+          <!-- Boucle pour afficher les options -->
+          % for e in mesMaterielsId:
+          <option value="${e}">${e}</option>
+          % endfor
+        </select>
+  </div>
+  <button type="submit" class="modern-button">Supprimer</button>
+</form>
+
+
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>
+
+

@@ -1,0 +1,96 @@
+﻿<%inherit file="template.html"/>
+
+<h3>Insertion d'un objet céleste</h3>
+
+<p class="message alert alert-${type}">${message}</p>
+
+<form action="insertionobjetscelesteDone" method="POST" class="needs-validation insertForm" novalidate>
+  <div class="insertObjetForm">
+    <div class="insertObjetFormNom">
+      <div class="form-group">
+        <label for="nom"><span class="star">*</span>Nom:</label>
+        <input type="text" class="form-control" id="nom" placeholder="Entrer le nom de l'astre" name="nom" required>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît</div>
+      </div>
+
+      <div class="form-group">
+        <label for="type" class="modern-label"><span class="star">*</span>Type :</label>
+        <select class="modern-select" id="type" name="type" required>
+          <option value="" selected disabled>Sélectionnez le type</option>
+          <option value="Téllurique">Téllurique</option>
+          <option value="Gazeux">Gazeux</option>
+        </select>
+        <div class="valid-feedback">Valide.</div>
+        <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+      </div>
+    </div>
+
+  <div class="insertObjetFormOther">
+    <div class="form-group">
+      <label for="distanceTerre" class="modern-label">Distance Terre:</label>
+      <input type="number" class="modern-input" id="distanceTerre" placeholder="Entrer la distance à la Terre" name="distanceTerre" step="1">
+      <div class="valid-feedback">Valide.</div>
+      <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+    </div>
+    
+    <div class="form-group">
+      <label for="distanceSoleil" class="modern-label"><span class="star">*</span>Distance Soleil:</label>
+      <input type="number" class="modern-input" id="distanceSoleil" placeholder="Entrer la distance au Soleil" name="distanceSoleil" step="1" required>
+      <div class="valid-feedback">Valide.</div>
+      <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+    </div>
+
+    <div class="form-group">
+      <label for="distanceGalaxie" class="modern-label">Distance Galaxie:</label>
+      <input type="number" class="modern-input" id="distanceGalaxie" placeholder="Entrer la distance à la Galaxie" name="distanceGalaxie" step="1">
+      <div class="valid-feedback">Valide.</div>
+      <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+    </div>
+
+    <div class="form-group">
+      <label for="luminosite" class="modern-label">Luminosité:</label>
+      <input type="number" class="modern-input" id="luminosite" placeholder="Entrer la luminosite" name="luminosite" step="1">
+      <div class="valid-feedback">Valide.</div>
+      <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+    </div>
+
+    <div class="form-group">
+      <label for="vitesse" class="modern-label">Vitesse:</label>
+      <input type="number" class="modern-input" id="vitesse" placeholder="Entrer la vitesse" name="vitesse" step="1">
+      <div class="valid-feedback">Valide.</div>
+      <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+    </div>
+
+    <div class="form-group">
+      <label for="age" class="modern-label"><span class="star">*</span>Âge:</label>
+      <input type="number" class="modern-input" id="age" placeholder="Entrer l'âge" name="age" step="1" required>
+      <div class="valid-feedback">Valide.</div>
+      <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary modern-button">Insérer</button>
+  </div>
+
+  </div>
+</form>
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script> 

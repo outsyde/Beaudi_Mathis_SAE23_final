@@ -1,0 +1,27 @@
+<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<pre class="bg-info text-white">
+
+<b>Utilisation :</b>
+- Tester sur Linux -> Fonctionne pas. Fonctionne sur Windows.
+- Pour la suppression d'observation c'est par le lieu de l'observation et son numéro
+- Pas de présence de la partie publique, impossible à faire fonctionner..
+- Présence de contrainte, pour pouvoir supprimer sans soucis, il faut d'abord supprimer une entrée dans "Observation" qui est lié au table "Matériel" et "Objet"
+- Par exemple : Dans table Observation -> matériel : TÉLÉSCOPE DE CATADIOPTRIQUE et objet observé : Vénus
+=> Il faudra d'abord supprimer cette entrée de la table "Observation" pour supprimer dans Matériel "TÉLÉSCOPE DE CATADIOPTRIQUE" et dans Objets célestes "Vénus"
+
+<form action="loadCSVMateriel">
+    <button type="submit" class="btn btn-primary modern-button">Charger le CSV de Materiel</button>
+</form>
+<form action="loadCSVObjet">
+    <button type="submit" class="btn btn-primary modern-button">Charger le CSV d'Objet</button>
+</form>
+<form action="loadCSVObservation">
+    <button type="submit" class="btn btn-primary modern-button">Charger le CSV d'Observation</button>
+</form>
+
+</pre>
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>
+

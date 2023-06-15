@@ -1,0 +1,90 @@
+﻿<%inherit file="template.html"/>
+
+<h3>Insertion d'un observation</h3>
+
+<p class="message alert alert-${type}">${message}</p>
+
+ <form action="insertionobservationDone" method="POST" class="needs-validation insertForm" novalidate>
+  
+  <div class="form-group">
+    <label class="form">
+    <label for="date"><span class="star">*</span>Date de l'observation :</label>
+    <input type="date" class="form-control" id="date" placeholder="Date de l'observation" name="date" required>
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="lieu" class="modern-label"><span class="star">*</span>Lieu:</label>
+    <input type="text" class="modern-input" id="lieu" placeholder="Entrer le lieu" name="lieu" required>
+    <div class="valid-feedback">Valide.</div>
+    <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="observatoire" class="modern-label">Observatoire:</label>
+    <input type="text" class="modern-input" id="observatoire" placeholder="Entrer un observatoire" name="observatoire">
+    <div class="valid-feedback">Valide.</div>
+    <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+  </div>
+
+  <div class="form-group">
+    <label for="filmObjet" class="modern-label">Film:</label>
+    <input type="text" class="modern-input" id="filmObjet" placeholder="Entrer un film" name="filmObjet">
+    <div class="valid-feedback">Valide.</div>
+    <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+  </div>
+
+  <div class="form-group">
+    <label for="type" class="modern-label"><span class="star">*</span>Type :</label>
+    <select class="modern-select" id="type" name="type" required>
+      <option value="" selected disabled>Sélectionnez le type</option>
+      <option value="soirée">soirée</option>
+      <option value="journée">journée</option>
+    </select>
+    <div class="valid-feedback">Valide.</div>
+    <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+  </div>
+
+  <div class="form-group">
+    <label for="materiel" class="modern-label">Matériel:</label>
+        <select class="modern-select" name="materiel" id="materiel">
+          <!-- Boucle pour afficher les options -->
+          % for e in mesMateriel:
+          <option value="${e}">${e}</option>
+          % endfor
+        </select>
+  </div>
+
+  <div class="form-group">
+    <label for="objetObserve" class="modern-label">Objet observé:</label>
+        <select class="modern-select" name="objetObserve" id="objetObserve">
+          <!-- Boucle pour afficher les options -->
+          % for e in mesObjet:
+          <option value="${e}">${e}</option>
+          % endfor
+        </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary modern-button">Insérer</button>
+</form>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script> 

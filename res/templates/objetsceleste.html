@@ -1,0 +1,18 @@
+﻿<%inherit file="template.html"/>
+<%doc> début de ce qui va être le "self.body()" ...  </%doc>
+
+<h3 class="affichageobjet">Affichage</h3>
+<h3 class="listeobjet">Liste des objets célestes</h3>
+
+<div class="container">
+  % for e in mesObjets:
+  <div class="objetceleste">
+      ${e} <br />
+  </div>
+  % endfor
+</div>
+
+
+<%doc> fin de ce qui va être le "self.body()" ...  </%doc>
+
+

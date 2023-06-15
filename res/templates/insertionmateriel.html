@@ -1,0 +1,50 @@
+﻿<%inherit file="template.html"/>
+
+<h3>Insertion d'un objet céleste</h3>
+
+<p class="message alert alert-${type}">${message}</p>
+
+ <form action="insertionmaterielDone" method="POST" class="needs-validation insertForm" novalidate>
+  
+  <div class="form-group">
+    <label for="type" class="modern-label"><span class="star">*</span>Type :</label>
+    <select class="modern-select" id="type" name="type" required>
+      <option value="" selected disabled>Sélectionnez le type</option>
+      <option value="TÉLÉSCOPE DE NEWTON">TÉLÉSCOPE DE NEWTON</option>
+      <option value="TÉLÉSCOPE DE CASSEGRAIN">TÉLÉSCOPE DE CASSEGRAIN</option>
+      <option value="TÉLÉSCOPE CATADIOPTRIQUE">TÉLÉSCOPE CATADIOPTRIQUE</option>
+    </select>
+    <div class="valid-feedback">Valide.</div>
+    <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+  </div>
+
+  <div class="form-group">
+    <label for="prix" class="modern-label"><span class="star">*</span>Prix:</label>
+    <input type="number" class="modern-input" id="prix" placeholder="Entrer le prix" name="prix" step="1">
+    <div class="valid-feedback">Valide.</div>
+    <div class="invalid-feedback">Veuillez remplir ce champ, s'il vous plaît !</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary modern-button">Insérer</button>
+</form>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script> 
